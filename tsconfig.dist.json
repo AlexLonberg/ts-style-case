@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "noEmit": false,
+    "noEmitOnError": true,
+    "target": "esnext",
+    "lib": [
+      "ES2022"
+    ],
+    "types": [],
+    "typeRoots": []
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "files": [],
+  "exclude": [
+    "./src/**/*.test.ts",
+    "./src/**/*.bench.ts",
+    "./src/**/_*"
+  ]
+}

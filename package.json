@@ -1,0 +1,39 @@
+{
+  "name": "ts-style-case",
+  "version": "0.1.0",
+  "description": "Style Case Converter",
+  "author": "Alexander Lonberg <alexlonberg@gmail.com>",
+  "homepage": "https://github.com/AlexLonberg/ts-style-case",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexLonberg/ts-style-case.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "style-case"
+  ],
+  "scripts": {
+    "lint": "eslint --config ./eslint.config.js",
+    "test": "vitest run --config ./vitest.config.ts",
+    "dist": "tsc --project tsconfig.dist.json",
+    "predist": "npm run lint && vitest run --browser.enabled=false --coverage.enabled=false --config vitest.config.ts && node ./scripts/dist.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.14",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.0",
+    "vitest": "^4.0.14"
+  },
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./src/index.ts"
+    }
+  },
+  "main": "./src/index.ts"
+}

@@ -1,0 +1,43 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    // "**/.git": true,
+    // "**/node_modules": true,
+    // ".temp/": true,
+    // ".vscode/": true,
+    // "dist/": true
+  },
+  "googleSearchContextMenu.items": {
+    "MDNWeb": {
+      "enabled": true
+    },
+    "NodeJS": {
+      "enabled": true
+    }
+  },
+  "eslint.runtime": "node",
+  "eslint.useESLintClass": true,
+  "eslint.useFlatConfig": true,
+  "eslint.codeActionsOnSave.mode": "problems",
+  // "eslint.codeActionsOnSave.mode": "all",
+  // Отключаем действия для правил удаляющих код при форматировании. Если выше включен mode:"problems" - эта настройка игнорируется.
+  // !rule - off
+  // *     - on
+  "eslint.codeActionsOnSave.rules": [
+    "!no-unused-vars",
+    "!@typescript-eslint/no-unused-vars",
+    "*"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+    // Обе опции не могут сортировать импорт начиная с типов
+    // "source.organizeImports": "explicit",
+    // "source.sortImports": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "vitest.shellType": "terminal",
+  "cSpell.words": []
+}

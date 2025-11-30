@@ -1,0 +1,6 @@
+.private/
+.temp/
+node_modules/
+dist/
+.tpk.config.json
+_*
